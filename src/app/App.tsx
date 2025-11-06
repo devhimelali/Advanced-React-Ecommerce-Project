@@ -1,6 +1,10 @@
+import { Button } from "@/shared/ui/Button"
+
 const App = () => {
   return (
-    <div>App</div>
+    <div>
+      <Button />
+    </div>
   )
 }
 
