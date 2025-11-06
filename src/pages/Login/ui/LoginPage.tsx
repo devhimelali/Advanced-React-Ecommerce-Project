@@ -1,7 +1,10 @@
+import { Link } from "react-router"
+
 const LoginPage = () => {
     return (
         <div>
-            Login
+            <h1>Login</h1>
+            <Link to={"/"}>Home Page</Link>
         </div>
     )
 }
