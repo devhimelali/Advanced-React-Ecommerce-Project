@@ -4,13 +4,18 @@ import {AppIcon, Button, Input} from "@/shared/ui";
 import MapPin from "@/shared/assets/icons/MapPin.svg?react"
 import SearchIcon from "@/shared/assets/icons/Search.svg?react"
 import UsersIcon from "@/shared/assets/icons/Users.svg?react"
-import CircleIcon from "@/shared/assets/icons/Circle.svg?react"
-import {useTheme} from "@/shared/config";
-import {LanguageSwitcher} from "@/widgets/Header";
+import {LanguageSwitcher, ThemeSwitcher} from "@/widgets/Header";
+import {useTranslation} from "react-i18next";
+import {useNavigate} from "react-router";
+import {routePaths} from "@/shared/config";
 
 export const Header = () => {
-    const {toggleTheme} = useTheme();
-    
+    const {t} = useTranslation();
+    const navigate = useNavigate();
+
+    const handleLoginClick = () => {
+        navigate(routePaths.login);
+    }
     return (
         <header className={styles.header}>
             <div className={styles.section}>
@@ -23,7 +28,7 @@ export const Header = () => {
             <div className={styles.section}>
                 <Input
                     rounded
-                    placeholder={'Search by'}
+                    placeholder={t('header.searchBy')}
                     Icon={
                         <AppIcon Icon={SearchIcon} size={18} variant="background"/>
                     }
@@ -31,15 +36,13 @@ export const Header = () => {
             </div>
             <div className={styles.section}>
                 <Button variant="secondary">
-                    Cart
+                    {t('header.cart')}
                 </Button>
-                <Button variant="outline">
+                <Button onClick={handleLoginClick} variant="outline">
                     <AppIcon Icon={UsersIcon}/>
-                    <span>Login</span>
+                    <span>{t('header.login')}</span>
                 </Button>
-                <Button onClick={toggleTheme} variant="ghost">
-                    <AppIcon Icon={CircleIcon} filled/>
-                </Button>
+                <ThemeSwitcher/>
                 <LanguageSwitcher/>
             </div>
         </header>
