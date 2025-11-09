@@ -5,22 +5,12 @@ import MapPin from "@/shared/assets/icons/MapPin.svg?react"
 import SearchIcon from "@/shared/assets/icons/Search.svg?react"
 import UsersIcon from "@/shared/assets/icons/Users.svg?react"
 import CircleIcon from "@/shared/assets/icons/Circle.svg?react"
-import EnglishIcon from "@/shared/assets/icons/English.svg?react"
-import BanglaIcon from "@/shared/assets/icons/Bangla.svg?react"
-import {useTranslation} from "react-i18next";
 import {useTheme} from "@/shared/config";
+import {LanguageSwitcher} from "@/widgets/Header";
 
 export const Header = () => {
-
-    const {i18n} = useTranslation();
-
     const {toggleTheme} = useTheme();
-
-    const handleToggleLanguage = () => {
-        i18n.changeLanguage(i18n.language === 'en' ? 'bn' : 'en');
-    }
-
-
+    
     return (
         <header className={styles.header}>
             <div className={styles.section}>
@@ -50,15 +40,7 @@ export const Header = () => {
                 <Button onClick={toggleTheme} variant="ghost">
                     <AppIcon Icon={CircleIcon} filled/>
                 </Button>
-                <Button onClick={handleToggleLanguage} variant="ghost">
-                    {
-                        i18n.language === 'en' ? (
-                            <AppIcon Icon={EnglishIcon}/>
-                        ) : (
-                            <AppIcon Icon={BanglaIcon}/>
-                        )
-                    }
-                </Button>
+                <LanguageSwitcher/>
             </div>
         </header>
     );
