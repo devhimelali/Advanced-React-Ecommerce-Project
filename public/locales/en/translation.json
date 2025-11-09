@@ -1,7 +1,29 @@
 {
-    "header": {
-      "searchBy": "Search by",
-      "cart": "Cart",
-      "login": "Login"
-    }
+  "header": {
+    "searchBy": "Search by",
+    "cart": "Cart",
+    "login": "Login"
+  },
+  "footer": {
+    "about": "About",
+    "aboutUs": "About Us",
+    "ourBranches": "Our Branches",
+    "changeLog": "Change Log",
+    "quickLinks": "Quick Links",
+    "faqs": "FAQs",
+    "recipes": "Recipes",
+    "contactUs": "Contact Us",
+    "helpSupport": "Help & Support",
+    "termOfSupport": "Term of Support",
+    "privacyPolicy": "Privacy Policy",
+    "security": "Security",
+    "company": "Company",
+    "blog": "Blog",
+    "contact": "Contact",
+    "social": "Social",
+    "facebook": "Facebook",
+    "instagram": "Instagram",
+    "twitter": "Twitter",
+    "copyright": "All rights reserved © {{year}} {{company}}"
+  }
 }
