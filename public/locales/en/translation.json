@@ -33,5 +33,10 @@
     "title": "Something went wrong",
     "description": "Sorry - an unexpected error occurred. Please try refreshing the page or come back later.",
     "reload": "Try again"
+  },
+  "notFound": {
+    "title": "Page Not Found",
+    "description": "The page you are looking for isn't available. It might have been removed had its name changed or is temporarily unavailable. Try to search again or go back button bellow.",
+    "goBack": "Go back"
   }
 }

@@ -1,15 +1,20 @@
-import { HomePage } from '@/pages/Home/';
-import { LoginPage } from '@/pages/Login';
-import { AppRoutes, routePaths } from '@/shared/config';
-import type { RouteProps } from 'react-router';
+import {HomePage} from '@/pages/Home/';
+import {LoginPage} from '@/pages/Login';
+import {AppRoutes, routePaths} from '@/shared/config';
+import type {RouteProps} from 'react-router';
+import {NotFoundPage} from "@/pages/NotFound";
 
 export const routeConfig: RouteProps[] = [
     {
         path: routePaths[AppRoutes.HOME],
-        element: <HomePage />,
+        element: <HomePage/>,
     },
     {
         path: routePaths[AppRoutes.LOGIN],
-        element: <LoginPage />,
+        element: <LoginPage/>,
     },
+    {
+        path: routePaths[AppRoutes.NOT_FOUND],
+        element: <NotFoundPage/>
+    }
 ];
