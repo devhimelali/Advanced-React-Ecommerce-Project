@@ -25,5 +25,8 @@
     "instagram": "ইনস্টাগ্রাম",
     "twitter": "টুইটার",
     "copyright": "সর্বস্বত্ব সংরক্ষিত © {{year}} {{company}}"
+  },
+  "pageLoader": {
+    "loading": "লোড হচ্ছে..."
   }
 }

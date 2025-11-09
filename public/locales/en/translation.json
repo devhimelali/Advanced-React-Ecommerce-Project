@@ -25,5 +25,8 @@
     "instagram": "Instagram",
     "twitter": "Twitter",
     "copyright": "All rights reserved © {{year}} {{company}}"
+  },
+  "pageLoader": {
+    "loading": "Loading..."
   }
 }
