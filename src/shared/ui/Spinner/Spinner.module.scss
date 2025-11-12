@@ -18,7 +18,7 @@
 }
 
 .spinner::before {
-  border-color: #f03355 #0000;
+  border-color: var(--primary-color) #0000;
   animation: inherit;
   animation-duration: .5s;
   animation-direction: reverse;
