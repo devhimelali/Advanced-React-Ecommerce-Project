@@ -1,0 +1,16 @@
+import type { Meta, StoryObj } from '@storybook/react-vite';
+
+import {AppIcon, Spinner} from "@/shared/ui";
+import {Footer} from "@/widgets/Footer";
+
+const meta = {
+    title: 'widgets/Footer',
+    component: Footer,
+} satisfies Meta<typeof Footer>;
+
+export default meta;
+type Story = StoryObj<typeof meta>;
+
+
+export const Default: Story = {
+};

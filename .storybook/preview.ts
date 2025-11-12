@@ -1,7 +1,7 @@
 import type {Preview} from '@storybook/react-vite'
 
 import '../src/app/styles/index.scss'
-import {ThemeDecorator} from '../src/shared/config/storybook'
+import {ThemeDecorator, RouterDecorator, LanguageDecorator} from '../src/shared/config/storybook'
 
 const preview: Preview = {
     globalTypes: {
@@ -23,6 +23,25 @@ const preview: Preview = {
                dynamicTitle:true
            },
            defaultValue: 'blue-theme'
+       },
+        locale:{
+           name: "Locale",
+           description: " App locale",
+           toolbar:{
+               icon: 'globe',
+               items: [
+                   {
+                       value: "en",
+                       title: "English",
+                   },
+                   {
+                       value: "bn",
+                       title: "Bangla",
+                   }
+               ],
+               dynamicTitle:true
+           },
+           defaultValue: 'en'
        }
     },
     parameters: {
@@ -40,7 +59,7 @@ const preview: Preview = {
             test: 'todo'
         }
     },
-    decorators: [ThemeDecorator],
+    decorators: [ThemeDecorator, RouterDecorator, LanguageDecorator],
 };
 
 export default preview;
